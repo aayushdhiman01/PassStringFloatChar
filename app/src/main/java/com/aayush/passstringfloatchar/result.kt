@@ -20,24 +20,24 @@ class result : AppCompatActivity() {
         tvString.setText(pString)
 
 
-//        var pFloat: String=" "
-//        lateinit  var tvFloat: TextView
-//        intent?.let { abc->
-//            if (abc.hasExtra("Float"))
-//                pFloat=abc.getStringExtra("Float") as String
-//        }?:kotlin.run{ }
-//        tvFloat=findViewById(R.id.tvFloat)
-//        var  rFloat = Integer.parseInt(pFloat)
-//        tvFloat.setText(rFloat)
-//
-//        var pDouble: String=" "
-//        lateinit  var tvDouble: TextView
-//        intent?.let { abc->
-//            if (abc.hasExtra("Double"))
-//                pDouble=abc.getStringExtra("Double") as String
-//        }?:kotlin.run{ }
-//        tvFloat=findViewById(R.id.tvDouble)
-//        var  rDouble = Integer.parseInt(pDouble)
-//        tvFloat.setText(rDouble)
+        var pFloat: String=" "
+        lateinit  var tvFloat: TextView
+        intent?.let { abc->
+            if (abc.hasExtra("Float"))
+                pFloat=abc.getStringExtra("Float") as String
+        }?:kotlin.run{ }
+        tvFloat=findViewById(R.id.tvFloat)
+        var  rFloat = Integer.parseInt(pFloat)
+        tvFloat.setText(rFloat)
+
+        var pDouble: String=" "
+        lateinit  var tvDouble: TextView
+        intent?.let { abc->
+            if (abc.hasExtra("Double"))
+                pDouble=abc.getStringExtra("Double") as String
+        }?:kotlin.run{ }
+        tvDouble=findViewById(R.id.tvDouble)
+        var  rDouble = Integer.parseInt(pDouble)
+        tvFloat.setText(rDouble)
     }
 }
