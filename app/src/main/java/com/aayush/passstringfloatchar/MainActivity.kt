@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intentD)
                 finish()
                 var intentC = Intent(this, result::class.java)
-                intentC.putExtra("Char",binding.etString.text.toString())
+                intentC.putExtra("Char",binding.etChar.text.toString())
                 startActivity(intentC)
                 finish()
             }

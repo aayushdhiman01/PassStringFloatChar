@@ -16,11 +16,13 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="100dp"
+
         android:hint="@string/Enter_String" />
     <EditText
         android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:id="@+id/etFloat"
+        android:inputType="numberDecimal"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="70dp"
         android:hint="@string/Enter_Float"
@@ -29,6 +31,7 @@
         android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:id="@+id/etDouble"
+        android:inputType="numberDecimal"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="70dp"
         android:hint="@string/Enter_Double"
@@ -37,6 +40,7 @@
         android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:id="@+id/etChar"
+        android:inputType="text"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="70dp"
         android:hint="@string/Enter_Char"
