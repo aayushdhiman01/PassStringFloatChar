@@ -38,8 +38,8 @@ class MainActivity : AppCompatActivity() {
                 var intent = Intent(this, result::class.java)
                 intent.putExtra("String",binding.etString.text.toString())
                 intent.putExtra("Float",binding.etFloat.text.toString())
-                intent.putExtra("Double",binding.etString.text.toString())
-                intent.putExtra("Char",binding.etString.text.toString())
+                intent.putExtra("Double",binding.etDouble.text.toString())
+                intent.putExtra("Char",binding.etChar.text.toString())
                 startActivity(intent)
                 finish()
 
