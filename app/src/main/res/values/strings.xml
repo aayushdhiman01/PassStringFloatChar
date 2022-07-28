@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">PassStringFloatChar</string>
+    <string name="Enter_String">Enter String</string>
+    <string name="Enter_Float">Enter Float</string>
+    <string name="Enter_Double">Enter Double</string>
+    <string name="Enter_Char">Enter Character</string>
+    <string name="PASS_VALUE">PASS VALUE</string>
+    <string name="please_enter_string">please enter string</string>
+
 </resources>
