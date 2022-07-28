@@ -42,6 +42,9 @@ class MainActivity : AppCompatActivity() {
                 intent.putExtra("Char",binding.etString.text.toString())
                 startActivity(intent)
                 finish()
+
+//            ____________________________________________________________
+//            {WRONG CODE}
 //                var intentF = Intent(this, result::class.java)
 //                intentF.putExtra("Float",binding.etFloat.text.toString())
 //                startActivity(intentF)
@@ -54,6 +57,7 @@ class MainActivity : AppCompatActivity() {
 //                intentC.putExtra("Char",binding.etChar.text.toString())
 //                startActivity(intentC)
 //                finish()
+//            _____________________________________________________________
 
 
         }
