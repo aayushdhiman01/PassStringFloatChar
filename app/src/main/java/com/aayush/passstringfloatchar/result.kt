@@ -31,14 +31,15 @@ class result : AppCompatActivity() {
         tvFloat=findViewById(R.id.tvFloat)
         var  rFloat = Integer.parseInt(pFloat)
         tvFloat.setText(rFloat)
+        
         var pDouble: String=" "
         lateinit  var tvDouble: TextView
         intent?.let { abc->
             if (abc.hasExtra("Double"))
                 pDouble=abc.getStringExtra("Double") as String
         }?:kotlin.run{ }
-        tvFloat=findViewById(R.id.tvFloat)
-        var  rFloat = Integer.parseInt(pFloat)
-        tvFloat.setText(rFloat)
+        tvFloat=findViewById(R.id.tvDouble)
+        var  rDouble = Integer.parseInt(pDouble)
+        tvFloat.setText(rDouble)
     }
 }
