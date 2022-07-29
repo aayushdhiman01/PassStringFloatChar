@@ -13,7 +13,7 @@ class result : AppCompatActivity() {
         var pFloat: Float= 0f
         var pString: String=""
         var pDouble: Double = 0.0
-        var pChar: Character=""
+        var pChar: Char='\u0000'
         lateinit  var tvDouble: TextView
         lateinit  var tvFloat: TextView
         lateinit  var tvString: TextView
@@ -26,19 +26,14 @@ class result : AppCompatActivity() {
             if (abc.hasExtra("Double"))
                 pDouble=abc.getDoubleExtra("Double",0.0)
             if (abc.hasExtra("Char"))
-                pChar=abc.getCharExtra("Char",)
+                pChar=abc.getCharExtra("Char",'\u0000')
         }?:kotlin.run{ }
         tvString=findViewById(R.id.tvString)
         tvString.setText(pString)
         tvFloat=findViewById(R.id.tvFloat)
-        var  rFloat = Integer.parseInt(pFloat)
         tvFloat.setText(pFloat.toString())
         tvDouble=findViewById(R.id.tvDouble)
-        var  rDouble = Integer.parseInt(pDouble)
-        tvDouble.setText(rDouble)
-        tvChar=findViewById(R.id.tvChar)
-        tvChar.setText(rDouble)
-
-
+        tvDouble.setText(pDouble.toString())
+        tvChar.setText(pChar.toString())
     }
 }
