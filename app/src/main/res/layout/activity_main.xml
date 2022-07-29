@@ -41,6 +41,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/etChar"
         android:inputType="text"
+        android:maxLength="1"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="70dp"
         android:hint="@string/Enter_Char"
