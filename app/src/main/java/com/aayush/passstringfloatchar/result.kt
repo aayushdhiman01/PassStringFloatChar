@@ -7,17 +7,18 @@ import android.widget.TextView
 import com.aayush.passstringfloatchar.databinding.ActivityMainBinding
 
 class result : AppCompatActivity() {
+    var pFloat: Float= 0f
+    var pString: String=""
+    var pDouble: Double = 0.0
+    var pChar: Char='\u0000'
+    lateinit  var tvDouble: TextView
+    lateinit  var tvFloat: TextView
+    lateinit  var tvString: TextView
+    lateinit var tvChar:TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
-        var pFloat: Float= 0f
-        var pString: String=""
-        var pDouble: Double = 0.0
-        var pChar: Char='\u0000'
-        lateinit  var tvDouble: TextView
-        lateinit  var tvFloat: TextView
-        lateinit  var tvString: TextView
-        lateinit var tvChar:TextView
+
         intent?.let { abc->
             if (abc.hasExtra("String"))
                 pString=abc.getStringExtra("String") as String
@@ -34,6 +35,7 @@ class result : AppCompatActivity() {
         tvFloat.setText(pFloat.toString())
         tvDouble=findViewById(R.id.tvDouble)
         tvDouble.setText(pDouble.toString())
+        tvChar = findViewById(R.id.tvChar)
         tvChar.setText(pChar.toString())
     }
 }

@@ -16,33 +16,32 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.pass.setOnClickListener {
-//            if (binding.etString.text.toString().isNullOrEmpty()) {
-//                binding.etString.error = resources.getString(R.string.please_enter_string)
-//                binding.etString.requestFocus()
-//            }
-//            else if(binding.etFloat.text.toString().isNullOrEmpty()) {
-//                binding.etFloat.error = resources.getString(R.string.please_enter_string)
-//                binding.etFloat.requestFocus()
-//            }
-//            else if(binding.etDouble.text.toString().isNullOrEmpty()) {
-//                binding.etDouble.error = resources.getString(R.string.please_enter_string)
-//                binding.etDouble.requestFocus()
-//            }
-//            else if(binding.etChar.text.toString().isNullOrEmpty()) {
-//                binding.etChar.error = resources.getString(R.string.please_enter_string)
-//                binding.etChar.requestFocus()
-//            }
-//
-//            else
-//            {
+            if (binding.etString.text.toString().isNullOrEmpty()) {
+                binding.etString.error = resources.getString(R.string.please_enter_string)
+                binding.etString.requestFocus()
+            }
+            else if(binding.etFloat.text.toString().isNullOrEmpty()) {
+                binding.etFloat.error = resources.getString(R.string.please_enter_string)
+                binding.etFloat.requestFocus()
+            }
+            else if(binding.etDouble.text.toString().isNullOrEmpty()) {
+                binding.etDouble.error = resources.getString(R.string.please_enter_string)
+                binding.etDouble.requestFocus()
+            }
+            else if(binding.etChar.text.toString().isNullOrEmpty()) {
+                binding.etChar.error = resources.getString(R.string.please_enter_string)
+                binding.etChar.requestFocus()
+            }
+
+            else {
                 var intent = Intent(this, result::class.java)
-                intent.putExtra("String",binding.etString.text.toString())
-                intent.putExtra("Float",binding.etFloat.text.toString())
-                intent.putExtra("Double",binding.etDouble.text.toString().toDouble())
-                intent.putExtra("Char",binding.etChar.text.toString().get(0))
+                intent.putExtra("String", binding.etString.text.toString())
+                intent.putExtra("Float", binding.etFloat.text.toString().toFloat())
+                intent.putExtra("Double", (binding.etDouble.text.toString()).toDouble())
+                intent.putExtra("Char", binding.etChar.text.toString().get(0))
                 startActivity(intent)
                 finish()
-
+            }
 //            ____________________________________________________________
 //            {WRONG CODE}
 //                var intentF = Intent(this, result::class.java)
