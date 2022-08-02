@@ -32,13 +32,17 @@ class MainActivity : AppCompatActivity() {
                 binding.etChar.error = resources.getString(R.string.please_enter_string)
                 binding.etChar.requestFocus()
             }
-
+            else if(binding.etBoolean.text.toString().isNullOrEmpty()){
+                binding.etBoolean.error = resources.getString(R.string.please_enter_string)
+                binding.etBoolean.requestFocus()
+            }
             else {
                 var intent = Intent(this, result::class.java)
                 intent.putExtra("String", binding.etString.text.toString())
                 intent.putExtra("Float", binding.etFloat.text.toString().toFloat())
                 intent.putExtra("Double", (binding.etDouble.text.toString()).toDouble())
                 intent.putExtra("Char", binding.etChar.text.toString().get(0))
+                intent.putExtra("Boolean", binding.etBoolean.text.toString().toBoolean())
                 startActivity(intent)
                 finish()
             }

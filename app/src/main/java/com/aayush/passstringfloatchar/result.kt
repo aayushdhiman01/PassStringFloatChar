@@ -11,10 +11,13 @@ class result : AppCompatActivity() {
     var pString: String=""
     var pDouble: Double = 0.0
     var pChar: Char='\u0000'
+    var pBoolean:Boolean=false
     lateinit  var tvDouble: TextView
     lateinit  var tvFloat: TextView
     lateinit  var tvString: TextView
     lateinit var tvChar:TextView
+    lateinit var tvBoolean:TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
@@ -28,6 +31,8 @@ class result : AppCompatActivity() {
                 pDouble=abc.getDoubleExtra("Double",0.0)
             if (abc.hasExtra("Char"))
                 pChar=abc.getCharExtra("Char",'\u0000')
+            if (abc.hasExtra("Boolean"))
+                pBoolean=abc.getBooleanExtra("Boolean",false)
         }?:kotlin.run{ }
         tvString=findViewById(R.id.tvString)
         tvString.setText(pString)
@@ -37,5 +42,7 @@ class result : AppCompatActivity() {
         tvDouble.setText(pDouble.toString())
         tvChar = findViewById(R.id.tvChar)
         tvChar.setText(pChar.toString())
+        tvBoolean=findViewById(R.id.tvBoolean)
+        tvBoolean.setText(pBoolean.toString())
     }
 }
