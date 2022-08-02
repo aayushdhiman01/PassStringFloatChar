@@ -37,12 +37,18 @@ class MainActivity : AppCompatActivity() {
                 binding.etBoolean.requestFocus()
             }
             else {
+                System.out.print("binding.etBoolean.text.toString().toBoolean() ${binding.etBoolean.text.toString().toBoolean()}")
+                var isTrue = false
+                if(binding.etBoolean.text.toString().equals("1", true)){
+                    isTrue = true
+                }
+
                 var intent = Intent(this, result::class.java)
                 intent.putExtra("String", binding.etString.text.toString())
                 intent.putExtra("Float", binding.etFloat.text.toString().toFloat())
                 intent.putExtra("Double", (binding.etDouble.text.toString()).toDouble())
                 intent.putExtra("Char", binding.etChar.text.toString().get(0))
-                intent.putExtra("Boolean", binding.etBoolean.text.toString().toBoolean())
+                intent.putExtra("Boolean", isTrue)
                 startActivity(intent)
                 finish()
             }
