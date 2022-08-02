@@ -52,21 +52,7 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             }
-//            ____________________________________________________________
-//            {WRONG CODE}
-//                var intentF = Intent(this, result::class.java)
-//                intentF.putExtra("Float",binding.etFloat.text.toString())
-//                startActivity(intentF)
-//                finish()
-//                var intentD = Intent(this, result::class.java)
-//                intentD.putExtra("Double",binding.etDouble.text.toString())
-//                startActivity(intentD)
-//                finish()
-//                var intentC = Intent(this, result::class.java)
-//                intentC.putExtra("Char",binding.etChar.text.toString())
-//                startActivity(intentC)
-//                finish()
-//            _____________________________________________________________
+
 
 
         }
